@@ -6,7 +6,8 @@ an AI that simulates various personalities, ranging from historical figures to f
 each with unique
 communication styles.
 
-- **Download `Sparkle_AI_v7.apk` file:** [Here](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sparkle_AI_v7.apk)
+- **Download `Sparkle_AI_v7.apk` file:
+  ** [Here](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sparkle_AI_v7.apk)
 
 ## Description 📝
 
@@ -19,6 +20,17 @@ communication styles
 and tones.
 
 ---
+
+## Table of Contents
+
+- [Usage](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#usage-)
+- [Project Structure](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#project-structure-)
+- [How It Works](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#how-it-works-%EF%B8%8F)
+- [Installation](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#installation-%EF%B8%8F)
+- [API Key Setup](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#api-key-setup-)
+- [File Details](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#file-details-)
+- [Dependencies](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#dependencies-)
+- [Author](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7?tab=readme-ov-file#author-)
 
 ## Usage 🚀
 
@@ -107,11 +119,9 @@ ___
 
 ___
 
-[//]: # (## Sample Images 📸)
+## Sample Images 📸
 
-[//]: # ()
-
-[//]: # ([Include screenshots or GIFs of the splash screen, persona selection screen, and chat interface here].)
+---
 
 ## Dependencies 📦
 
