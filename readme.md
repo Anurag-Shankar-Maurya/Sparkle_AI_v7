@@ -69,12 +69,12 @@ SparkleAI/
 
 ## Installation ⬇️
 
-1. **Clone the Repository:** `git clone https://github.com/YOUR_USERNAME/SparkleAI.git`
+1. **Clone the Repository:** `git clone https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7`
 2. **Open in Android Studio:** Open the project in Android Studio.
 3. **Build and Run:** Build the app and run it on an emulator or a physical Android device.
 4. **Gemini API Key:** You will need to obtain your own Gemini API key (refer to the Gemini API
-   documentation for
-   instructions) and place it in your `local.properties` file as described in the next section.
+   documentation for instructions) and place it in your `local.properties` file as described in the
+   next section.
 
 ---
 
@@ -101,8 +101,7 @@ ___
 * **`ChatAdapter.kt`:**  Manages the display of messages in the `RecyclerView`.
 * **`Message.kt`:**  Data class representing a chat message.
 * **`activity_splash.xml`, `activity_behaviour.xml`, `activity_main.xml`, `item_message.xml`:**
-  Layout files for the
-  UI.
+  Layout files for the UI.
 
 ___
 
@@ -115,9 +114,15 @@ ___
 ## Dependencies 📦
 
 * **Gemini API:** `com.google.ai.client.generativeai:generativeai:0.7.0`
-* **Markwon (Markdown rendering):
-  ** `io.noties.markwon:core:4.6.2` , `io.noties.markwon:image-coil:4.6.2`
-* **AndroidX Libraries:** [List all other AndroidX dependencies with their versions]
+* **Markdown:** `io.noties.markwon:core:4.6.2`
+* **AndroidX Libraries:** `implementation(libs.androidx.core.ktx)
+  implementation(libs.androidx.appcompat)
+  implementation(libs.material)
+  implementation(libs.androidx.activity)
+  implementation(libs.androidx.constraintlayout)
+  testImplementation(libs.junit)
+  androidTestImplementation(libs.androidx.junit)
+  androidTestImplementation(libs.androidx.espresso.core)`
 
 ---
 
