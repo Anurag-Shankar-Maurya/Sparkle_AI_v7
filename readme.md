@@ -23,8 +23,8 @@ and tones.
 
 ## Sample Images 📸
 
-<div style="display: flex; flex-wrap: nowrap; gap: 10px; justify-content: space-evenly; align: center;">
-
+<div style="display: flex; flex-wrap: nowrap; gap: 10px; justify-content: space-evenly; align-items: center; 
+    margin: 0 auto; height: 100%; align-content: center;">
 <img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splash.jpeg" alt="Splash Screen" width="110">
 <img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main1.jpeg" alt="Main Screen 1" width="110">
 <img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main2.jpeg" alt="Main Screen 2" width="110">
