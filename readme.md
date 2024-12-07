@@ -5,6 +5,7 @@ allows you to chat with
 an AI that simulates various personalities, ranging from historical figures to fictional characters,
 each with unique
 communication styles.
+-**Download `Sparkle_AI_v7.apk` file:** [Here](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sparkle_AI_v7.apk)
 
 ## Description 📝
 
