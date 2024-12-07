@@ -120,7 +120,7 @@ ___
 ___
 
 ## Sample Images 📸
-- [Splash Screen](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splash.jpeg)
+- ![Splash Screen](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splash.jpeg)
 - [Main Screen 1](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main1.jpeg)
 - [Main Screen 2](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main2.jpeg)
 - [Angry Behavior](https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/angry.jpeg)
