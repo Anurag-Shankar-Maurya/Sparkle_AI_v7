@@ -121,13 +121,13 @@ ___
 
 ## Sample Images 📸
 
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splash.jpeg" alt="Splash Screen" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main1.jpeg" alt="Main Screen 1" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main2.jpeg" alt="Main Screen 2" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/angry.jpeg" alt="Angry Behavior" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/thor.jpeg" alt="Thor" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/chef.jpeg" alt="Chef" width="400">
-<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/romanticGirl.jpeg" alt="Romantic Girl" width="400">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splash.jpeg" alt="Splash Screen" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main1.jpeg" alt="Main Screen 1" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/main2.jpeg" alt="Main Screen 2" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/angry.jpeg" alt="Angry Behavior" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/thor.jpeg" alt="Thor" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/chef.jpeg" alt="Chef" width="100">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/romanticGirl.jpeg" alt="Romantic Girl" width="100">
 
 ---
 
