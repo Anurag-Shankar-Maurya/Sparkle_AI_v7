@@ -1,0 +1,21 @@
+<!-- File: res/anim/move_to_center.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- Translate animation to move the TextView to the center -->
+    <translate
+        android:duration="800"
+        android:fromXDelta="0"
+        android:toYDelta="100%" />
+
+    <!-- Step 2: Zoom out effect -->
+<!--    <scale-->
+<!--        android:duration="800"-->
+<!--        android:fromXScale="1.0"-->
+<!--        android:fromYScale="1.0"-->
+<!--        android:pivotX="50%"-->
+<!--        android:pivotY="50%"-->
+<!--        android:toXScale="0.0"-->
+<!--        android:toYScale="0.0" />-->
+</set>

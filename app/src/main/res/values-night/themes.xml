@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SparkleAI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/gray_trans</item>
+    </style>
+
+    <style name="Theme.SparkleAI.ToolbarFont" parent="Base.Theme.SparkleAI">
+        <item name="android:fontFamily">@font/galada</item>
+        <item name="android:textSize">30sp</item>
+<!--        <item name="editTextColor">@color/color_primary_light</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

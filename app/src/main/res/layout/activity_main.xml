@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_activity_bg"
+    tools:context=".activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_sticky_bars"
+        android:theme="@style/Theme.SparkleAI.ToolbarFont" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/toolbar"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_bar_gradient" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <!-- Placeholder Text or Image in the center -->
+        <TextView
+            android:id="@+id/placeholderTextWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" /> <!-- Initially visible -->
+        <!-- Placeholder Text or Image in the center -->
+        <TextView
+            android:id="@+id/textViewSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/galada"
+            android:text="Sparkle Ai"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeholderTextWelcome" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Disable nested scrolling -->
+
+    <!-- Input field and send button -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/userInputMessageBox"
+        android:layout_below="@+id/toolbar"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/userInputMessageBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_sticky_bars"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/input_message_bg"
+            android:contentDescription="@string/message_input"
+            android:hint="@string/type_a_message"
+            android:importantForAccessibility="yes"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxHeight="100dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/color_primary"
+            android:textColorHint="@color/color_primary_trans" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/ic_send"
+            android:contentDescription="@string/send_button"
+            android:enabled="false" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/main"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@drawable/main_activity_bg"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    <androidx.appcompat.widget.Toolbar-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:background="@drawable/top_sticky_bars"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/placeholder"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/userInputMessageBox"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar">-->
+    <!--        &lt;!&ndash; Placeholder Text or Image in the center &ndash;&gt;-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/placeholderTextWelcome"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="@string/welcome_text"-->
+    <!--            android:textColor="@color/gray"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:visibility="visible"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" /> &lt;!&ndash; Initially visible &ndash;&gt;-->
+    <!--        &lt;!&ndash; Placeholder Text or Image in the center &ndash;&gt;-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/placeholderTextAppName"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/galada"-->
+    <!--            android:text="Sparkle Ai"-->
+    <!--            android:textSize="48sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:visibility="visible"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/placeholderTextWelcome" />-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    &lt;!&ndash; Disable nested scrolling &ndash;&gt;-->
+
+    <!--    &lt;!&ndash; Input field and send button &ndash;&gt;-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerViewChat"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/userInputMessageBox"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/userInputMessageBox"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/bottom_sticky_bars"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:padding="10dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/editTextMessage"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:background="@drawable/input_message_bg"-->
+    <!--            android:contentDescription="@string/message_input"-->
+    <!--            android:hint="@string/type_a_message"-->
+    <!--            android:importantForAccessibility="yes"-->
+    <!--            android:inputType="textMultiLine|textCapSentences"-->
+    <!--            android:maxHeight="100dp"-->
+    <!--            android:minHeight="48dp"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textColor="@color/color_secondary"-->
+    <!--            android:textColorHint="@color/color_primary" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/buttonSend"-->
+    <!--            android:layout_width="50dp"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:background="@drawable/ic_send"-->
+    <!--            android:contentDescription="@string/send_button"-->
+    <!--            android:enabled="false" />-->
+    <!--    </LinearLayout>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+

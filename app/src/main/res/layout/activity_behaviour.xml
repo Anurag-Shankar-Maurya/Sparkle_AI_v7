@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_activity_bg"
+    tools:context=".activity.BehaviourActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_sticky_bars"
+        android:theme="@style/Theme.SparkleAI.ToolbarFont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtCommunicationStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_blue_bg"
+                android:padding="10dp"
+                android:text="Communication Style: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollCommunicationStyles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button1"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/professional" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Professional"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button2"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/formal" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Formal"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button3"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/informal" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Informal"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button4"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/happy" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Happy"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button5"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/sad" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Sad"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button6"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/angry" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Angry"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button7"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/helpful" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Helpful"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button8"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/descriptive" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Descriptive"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button9"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/concise" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Concise"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button10"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/persuasive" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Persuasive"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button11"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/objective" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Objective"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button12"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/optimistic" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Optimistic"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button13"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/critical" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Critical"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button14"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/inspirational" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Inspirational"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button15"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/sympathetic" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Sympathetic"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button16"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/humorous" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Humorous"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtPersonalityTraits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_red_bg"
+                android:padding="10dp"
+                android:text="PersonalityTraits: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollPersonalityTraits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button17"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/confident" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Confident"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button18"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/wise" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Wise"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button19"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/analytical" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Analytical"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button20"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/witty" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Witty"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button21"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/empathetic" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Empathetic"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button22"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/motivational" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Motivational"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button23"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/curious" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Curious"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button24"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/passionate" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Passionate"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button25"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/practical" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Practical"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button26"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/imaginative" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Imaginative"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button27"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/realistic" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Realistic"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button28"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/spiritual" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Spiritual"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtFictionalCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_blue_bg"
+                android:padding="10dp"
+                android:text="Fictional Characters: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollFictionalCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button29"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/sherlock_holmes" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Sherlock Holmes"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button30"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/harry_potter" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Harry Potter"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button31"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/iron_man" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Iron Man"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button32"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/thor" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Thor"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                        added later-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button32_1"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/loki" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Loki"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button33"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/captain_america" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Captain America"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button34"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/dracula" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Dracula"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtRealCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_red_bg"
+                android:padding="10dp"
+                android:text="Real-Life Characters: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollRealCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button35"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/albert_einstein" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Albert Einstein"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button36"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/j_c_bose" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="J. C. Bose"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button37"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/issac_newton" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Issac Newton"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button38"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/elon_musk" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Elon Musk"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button39"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/steve_jobs" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Steve Jobs"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button40"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/c_v_raman" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="C. V. Raman"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button41"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/narendra_modi" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Narendra Modi"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button42"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/rahul_gandhi" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Rahul Gandhi"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtProfessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_blue_bg"
+                android:padding="10dp"
+                android:text="Professions: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollProfessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button43"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/farmer" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Farmer"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button44"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/engineer" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Engineer"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button45"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/doctor" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Doctor"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button46"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/teacher" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Teacher"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button47"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/it_and_software" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="IT and Software"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button48"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/entrepreneur" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Entrepreneur"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button49"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/chef" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Chef"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button50"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/business_and_commerce" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Business and Commerce"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/txtOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/behavior_heading_red_bg"
+                android:padding="10dp"
+                android:text="Others: ▼"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button51"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/tutor" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Tutor"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button52"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/poet" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Poet"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button53"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/storyteller" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Storyteller"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button54"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/romantic_girl" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Romantic Girl"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button55"
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/romantic_boy" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="150dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Romantic Boy"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

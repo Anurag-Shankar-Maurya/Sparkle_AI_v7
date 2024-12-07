@@ -1,0 +1,23 @@
+<!-- File: res/anim/zoom_out_hover.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- Step 1: Zoom out effect -->
+    <scale
+        android:duration="800"
+        android:fromXScale="100.0"
+        android:fromYScale="100.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1.0"
+        android:toYScale="1.0" />
+
+    <!-- Step 2: Hover effect (slight up and down movement) -->
+    <translate
+        android:duration="400"
+        android:fromYDelta="0"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse"
+        android:toYDelta="-50dp" />
+</set>

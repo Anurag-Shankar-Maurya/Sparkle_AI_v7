@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sparkle AI</string>
+    <string name="logo">logo</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="send">Send</string>
+    <string name="message">Message</string>
+    <string name="message_input" />
+    <string name="send_button" />
+    <string name="choose_the_behaviour_of_chat_assistant">Choose the behavior of Sparkle AI:</string>
+    <string name="welcome_text">Welcome! to</string>
+</resources>
