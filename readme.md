@@ -134,7 +134,16 @@ ___
 <img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/romanticGirl.jpeg" alt="Romantic Girl" width="110">
 
 </div>
+<div style="display: flex; flex-wrap: nowrap; gap: 10px; justify-content: space-evenly;">
 
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/splashDark.jpeg" alt="Dark Splash Screen" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/mainDark1.jpeg" alt="Dark Main Screen 1" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/mainDark2.jpeg" alt="Dark Screen 2" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/keyboardDark.jpeg" alt="Dark Keyboard" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/happyDark.jpeg" alt="Dark Happy" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/professionalDark.jpeg" alt="Dark Professional" width="110">
+<img src="https://github.com/Anurag-Shankar-Maurya/Sparkle_AI_v7/blob/master/Sample%20Images/sadDark.jpeg" alt="Dark Sad" width="110">
+</div>
 ---
 
 ## Dependencies 📦
